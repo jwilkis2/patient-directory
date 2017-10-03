@@ -1,3 +1,71 @@
-<h1>
-  {{title}}
-</h1>
+<!--
+<div>
+  {{filter}}
+</div>
+<div>
+  {{patients[0].firstName.toUpperCase().search(filter.toUpperCase())}}
+</div>
+<div>
+  {{patients[0].firstName.toUpperCase().search(filter.toUpperCase()) < 0 ? 'none' : 'table-row'}}
+</div>
+-->
+<!-- dropdown work in progress
+
+<div class="ui selection dropdown">
+  <input type="hidden" name="select">
+  <i class="dropdown icon"></i>
+  <div  class="default text">Select</div>
+  <div class="menu">
+    <div class="item" data-value="0">Name</div>
+    <div class="item" data-value="1">Email</div>
+    <div class="item" data-value="2">Doctor</div>
+  </div>
+</div>
+-->
+
+<!-- dropdown work in progress
+
+<select class="ui selection dropdown" placeholder="Select">
+  <option class="default text">Select...</option>
+  <option value="0">Name</option>
+  <option value="1">Email</option>
+  <option value="2">Doctor</option>
+</select>
+-->
+
+<!-- MIGRATED TO search-text COMPONENT
+<div class="ui action input focus">
+  <!--<input [(ngModel)]="searchText" placeholder="search for patient...">
+  <input type="text" placeholder="search for patient..." (click)="clearInput(search)" (keyup.enter)="searchPatients(search)" #search>
+  <button class="ui button" (click)="searchPatients(search)">Search</button>
+</div>
+-->
+<app-search-text
+  (onSearchResults)="searchResultsReceived($event)">
+</app-search-text>
+
+<!-- patient table -->
+<table class="ui striped padded table">
+  <tr>
+    <th class="single line">Photo</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Suffix</th>
+    <th>Email</th>
+    <th>Doctor</th>
+  </tr>
+  <tr *ngFor="let patient of patients" [ngStyle]="{'display': patient.toString().toUpperCase().search(filter.toUpperCase()) < 0 ? 'none' : 'table-row'}">
+    <td>
+      <div class="ui image header">
+        <img class="ui avatar image" src="{{patient.profileImage}}">
+      </div>
+    </td>
+    <td>{{patient.firstName}}</td>
+    <td>{{patient.middleName}}</td>
+    <td>{{patient.lastName}}</td>
+    <td>{{patient.suffix}}</td>
+    <td>{{patient.emailAddress}}</td>
+    <td>{{patient.doctorName}}</td>
+  </tr>
+</table>

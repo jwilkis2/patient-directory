@@ -1,0 +1,11 @@
+.input {
+    width: 200px;
+    height: 32px;
+}
+
+.profile-images{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border-color: white;
+}

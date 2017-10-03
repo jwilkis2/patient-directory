@@ -1,0 +1,6 @@
+<div class="ui large icon input">
+  <!--<input [(ngModel)]="searchText" placeholder="search for patient...">-->
+  <input type="text" placeholder="search for patient..." (click)="clearInput(search)" (keyup.enter)="searchPatients(search)" #search>
+  <i class="search link icon" (click)="searchPatients(search)">
+  </i>
+</div>
