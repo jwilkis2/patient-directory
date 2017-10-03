@@ -10,8 +10,8 @@ Expected grade: A
 Participation: https://github.com/jwilkis2/inventory-app
   
 ## Application Intent:  
-###Participation:  
-  - Createda an app that demonstrates components and passing values between components  
+### Participation:  
+  - Created an app that demonstrates components and passing values between components  
   
 #### Homework:  
   - Created array with dummy patient data  
