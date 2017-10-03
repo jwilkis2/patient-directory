@@ -9,8 +9,8 @@ Hours Invested: 10+
 Expected grade: A  
 Participation: https://github.com/jwilkis2/inventory-app
   
-## Application Intent:  
-### Participation:  
+### Application Intent:  
+#### Participation:  
   - Created an app that demonstrates components and passing values between components  
   
 #### Homework:  
