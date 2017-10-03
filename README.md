@@ -9,11 +9,11 @@ Hours Invested: 10+
 Expected grade: A  
 Participation: https://github.com/jwilkis2/inventory-app
   
-# Application Intent:  
-Participation:  
+## Application Intent:  
+###Participation:  
   - Createda an app that demonstrates components and passing values between components  
   
-# Homework:  
+#### Homework:  
   - Created array with dummy patient data  
   - Created table to display patient data  
   - Implemented search box and search button to search patient data  
