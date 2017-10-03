@@ -8,7 +8,6 @@ import { Patient } from './patient.model';
 })
 export class AppComponent {
   filter: string;
-  //style: string;
   patients: Patient[];
 
   constructor() {
@@ -97,24 +96,8 @@ export class AppComponent {
     ];
   }
 
-  /** MIGRATED TO search-text COMPONENT
-  searchPatients(search: HTMLInputElement): boolean {
-    console.log(this.patients[0].toString());
-    console.log(search.value);
-    this.searchText = search.value;
-    return false;
-  }
-
-  clearInput(inputElement: HTMLInputElement): boolean {
-    console.log("clearing input element");
-    inputElement.value = '';
-    this.searchText = '';
-    return false;
-  }
-  */
-
   searchResultsReceived(results: string): void {
-    console.log('received results: ' + results);
+    //console.log('received results: ' + results);
     this.filter = results;
   }
 

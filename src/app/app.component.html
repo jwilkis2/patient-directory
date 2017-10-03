@@ -1,45 +1,4 @@
-<!--
-<div>
-  {{filter}}
-</div>
-<div>
-  {{patients[0].firstName.toUpperCase().search(filter.toUpperCase())}}
-</div>
-<div>
-  {{patients[0].firstName.toUpperCase().search(filter.toUpperCase()) < 0 ? 'none' : 'table-row'}}
-</div>
--->
-<!-- dropdown work in progress
-
-<div class="ui selection dropdown">
-  <input type="hidden" name="select">
-  <i class="dropdown icon"></i>
-  <div  class="default text">Select</div>
-  <div class="menu">
-    <div class="item" data-value="0">Name</div>
-    <div class="item" data-value="1">Email</div>
-    <div class="item" data-value="2">Doctor</div>
-  </div>
-</div>
--->
-
-<!-- dropdown work in progress
-
-<select class="ui selection dropdown" placeholder="Select">
-  <option class="default text">Select...</option>
-  <option value="0">Name</option>
-  <option value="1">Email</option>
-  <option value="2">Doctor</option>
-</select>
--->
-
-<!-- MIGRATED TO search-text COMPONENT
-<div class="ui action input focus">
-  <!--<input [(ngModel)]="searchText" placeholder="search for patient...">
-  <input type="text" placeholder="search for patient..." (click)="clearInput(search)" (keyup.enter)="searchPatients(search)" #search>
-  <button class="ui button" (click)="searchPatients(search)">Search</button>
-</div>
--->
+<!-- search bar -->
 <app-search-text
   (onSearchResults)="searchResultsReceived($event)">
 </app-search-text>
